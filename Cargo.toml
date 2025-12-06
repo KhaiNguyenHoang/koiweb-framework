@@ -1,0 +1,25 @@
+[package]
+name = "koiweb-framework"
+version = "0.1.0"
+edition = "2024"
+description = "A micro web framework for Rust, inspired by Express.js. Just for trying or study, not for production."
+license = "MIT"
+repository = "https://github.com/KhaiNguyenHoang/koiweb-framework"
+authors = ["khaiproject1234@gmail.com"]
+readme = "README.md"
+keywords = ["web", "framework", "http", "async", "router"]
+categories = ["web-programming"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+hyper = { version = "0.14.32", features = [
+  "full",
+] } # Retaining 0.14 to align with most imports, but fixing specific issues
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+mime_guess = "2.0"
+futures = "0.3"
+bytes = "1"
+chrono = "0.4"
+thiserror = "1.0"
+dashmap = "5.5.3"
